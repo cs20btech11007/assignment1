@@ -1,0 +1,171 @@
+\documentclass[journal,12pt,twocolumn]{IEEEtran}
+
+\usepackage{setspace}
+\usepackage{gensymb}
+\singlespacing
+\usepackage[cmex10]{amsmath}
+
+\usepackage{hyperref}
+
+\usepackage{amsthm}
+
+\usepackage{mathrsfs}
+\usepackage{txfonts}
+\usepackage{stfloats}
+\usepackage{bm}
+\usepackage{cite}
+\usepackage{cases}
+\usepackage{subfig}
+
+\usepackage{longtable}
+\usepackage{multirow}
+
+\usepackage{enumitem}
+\usepackage{mathtools}
+\usepackage{steinmetz}
+\usepackage{tikz}
+\usepackage{circuitikz}
+\usepackage{verbatim}
+\usepackage{tfrupee}
+\usepackage[breaklinks=true]{hyperref}
+\usepackage{graphicx}
+\usepackage{tkz-euclide}
+
+\usetikzlibrary{calc,math}
+\usepackage{listings}
+    \usepackage{color}                                            %%
+    \usepackage{array}                                            %%
+    \usepackage{longtable}                                        %%
+    \usepackage{calc}                                             %%
+    \usepackage{multirow}                                         %%
+    \usepackage{hhline}                                           %%
+    \usepackage{ifthen}                                           %%
+    \usepackage{lscape}     
+\usepackage{multicol}
+\usepackage{chngcntr}
+
+\DeclareMathOperator*{\Res}{Res}
+
+\renewcommand\thesection{\arabic{section}}
+\renewcommand\thesubsection{\thesection.\arabic{subsection}}
+\renewcommand\thesubsubsection{\thesubsection.\arabic{subsubsection}}
+
+\renewcommand\thesectiondis{\arabic{section}}
+\renewcommand\thesubsectiondis{\thesectiondis.\arabic{subsection}}
+\renewcommand\thesubsubsectiondis{\thesubsectiondis.\arabic{subsubsection}}
+
+
+\hyphenation{op-tical net-works semi-conduc-tor}
+\def\inputGnumericTable{}                                 %%
+
+\lstset{
+%language=C,
+frame=single, 
+breaklines=true,
+columns=fullflexible
+}
+\begin{document}
+
+\newcommand{\BEQA}{\begin{eqnarray}}
+\newcommand{\EEQA}{\end{eqnarray}}
+\newcommand{\define}{\stackrel{\triangle}{=}}
+\bibliographystyle{IEEEtran}
+\raggedbottom
+\setlength{\parindent}{0pt}
+\providecommand{\mbf}{\mathbf}
+\providecommand{\pr}[1]{\ensuremath{\Pr\left(#1\right)}}
+\providecommand{\qfunc}[1]{\ensuremath{Q\left(#1\right)}}
+\providecommand{\sbrak}[1]{\ensuremath{{}\left[#1\right]}}
+\providecommand{\lsbrak}[1]{\ensuremath{{}\left[#1\right.}}
+\providecommand{\rsbrak}[1]{\ensuremath{{}\left.#1\right]}}
+\providecommand{\brak}[1]{\ensuremath{\left(#1\right)}}
+\providecommand{\lbrak}[1]{\ensuremath{\left(#1\right.}}
+\providecommand{\rbrak}[1]{\ensuremath{\left.#1\right)}}
+\providecommand{\cbrak}[1]{\ensuremath{\left\{#1\right\}}}
+\providecommand{\lcbrak}[1]{\ensuremath{\left\{#1\right.}}
+\providecommand{\rcbrak}[1]{\ensuremath{\left.#1\right\}}}
+\theoremstyle{remark}
+\newtheorem{rem}{Remark}
+\newcommand{\sgn}{\mathop{\mathrm{sgn}}}
+\providecommand{\abs}[1]{\vert#1\vert}
+\providecommand{\res}[1]{\Res\displaylimits_{#1}} 
+\providecommand{\norm}[1]{\lVert#1\rVert}
+%\providecommand{\norm}[1]{\lVert#1\rVert}
+\providecommand{\mtx}[1]{\mathbf{#1}}
+\providecommand{\mean}[1]{E[ #1 ]}
+\providecommand{\fourier}{\overset{\mathcal{F}}{ \rightleftharpoons}}
+%\providecommand{\hilbert}{\overset{\mathcal{H}}{ \rightleftharpoons}}
+\providecommand{\system}{\overset{\mathcal{H}}{ \longleftrightarrow}}
+	%\newcommand{\solution}[2]{\textbf{Solution:}{#1}}
+\newcommand{\solution}{\noindent \textbf{Solution: }}
+\newcommand{\cosec}{\,\text{cosec}\,}
+\providecommand{\dec}[2]{\ensuremath{\overset{#1}{\underset{#2}{\gtrless}}}}
+\newcommand{\myvec}[1]{\ensuremath{\begin{pmatrix}#1\end{pmatrix}}}
+\newcommand{\mydet}[1]{\ensuremath{\begin{vmatrix}#1\end{vmatrix}}}
+\numberwithin{equation}{subsection}
+\makeatletter
+\@addtoreset{figure}{problem}
+\makeatother
+\let\StandardTheFigure\thefigure
+\let\vec\mathbf
+\renewcommand{\thefigure}{\theproblem}
+\def\putbox#1#2#3{\makebox[0in][l]{\makebox[#1][l]{}\raisebox{\baselineskip}[0in][0in]{\raisebox{#2}[0in][0in]{#3}}}}
+     \def\rightbox#1{\makebox[0in][r]{#1}}
+     \def\centbox#1{\makebox[0in]{#1}}
+     \def\topbox#1{\raisebox{-\baselineskip}[0in][0in]{#1}}
+     \def\midbox#1{\raisebox{-0.5\baselineskip}[0in][0in]{#1}}
+\vspace{3cm}
+\title{AI1103-Assignment 1}
+\author{Name: badavathu revanth, Roll Number: CS20BTECH11007}
+\maketitle
+\newpage
+\bigskip
+\renewcommand{\thefigure}{\theenumi}
+\renewcommand{\thetable}{\theenumi}
+Download all python codes from 
+\begin{lstlisting}
+https://github.com/cs20btech11007/assignment1/blob/main/assignment1/code/problem.py
+https://github.com/cs20btech11007/assignment1/blob/main/assignment1/Figures/problem%20figures.py
+
+
+\end{lstlisting}
+%
+and latex-tikz codes from 
+%
+\begin{lstlisting}
+https://github.com/cs20btech11007/assignment1/blob/main/assignment1/main.tex
+
+\end{lstlisting}
+\section*{1.12}A coin is biased so that the head is 3 times
+as likely to occur as tail. If the coin is tossed
+twice, find the probability distribution of
+number of tails.\\
+
+\subsection*{sol.}
+ In the question given that,coin is biased and head is 3 times as likely to occur as tail.\\
+the coin has tossed twice 
+let i be random varaible i$\in\{0,1,2 \}$ denotes outcomes  in a experiment showing number of tails .\\
+$P(i)_h$   denotes the out come is head.\\
+$P(i)_t$    denotes the out come is tail .\\
+Given that,$$P(i)_h=3P(i)_i$$
+and we know that,
+\begin{equation}
+ P(i)_{h} +P(i)_{t}=1\\
+\end{equation}\\
+
+substitute in eqn (1)$$P(i)_h=3P(i)_i $$ 
+$$P(i)_t+3P(i)_t=1$$
+$$4P(i)_t=1$$
+$$ P(i)_t=\frac{1}{4}$$
+and $$P(i)_h=\frac{3}{4}$$\\
+  using  binomial distribution and now finding  probability distribution of number of tails in the events.\\
+$$ P(i=k)_t={n \choose k}( \frac{1}{4})^{n} (1-\frac{3}{4}) ^{n-k}$$
+in the above event$ n=2$\\
+$P(i=0)_t $ denotes the " 0 " number of times the coins showed tail in 2 tosses.\\
+$$ P(i=0)_t={2 \choose 0}( \frac{1}{4})^{0} (1-\frac{3}{4}) ^{2-0}=\frac{3*3}{4*4}=\frac{9}{16}$$\\
+\\$P(i=1)_t $ denotes the " 1 " number of times the coins showed tail in 2 tosses.\\
+$$p(i=1)_t={2 \choose 1}(\frac{1}{4} )^{1} ((1-\frac{3}{4}) ^{2-1}=(2)*{\frac{1*3}{4*4}}=\frac{6}{16}$$\\
+\\$P(i=2)_t $ denotes the " 2 " number of times the coins showed tail in 2 tosses.\\
+$$p(i=2)_t={2 \choose 2}( \frac{1}{4})^{2} (1-\frac{3}{4}) ^{2-2}=\frac{1*1}{4*4}=\frac{1}{16}$$\\
+\end{document}
+
